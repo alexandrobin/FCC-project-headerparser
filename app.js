@@ -11,11 +11,11 @@ app.use(cors({optionsSuccessStatus: 200}));  // some legacy browsers choke on 20
 
 app.get('/api/whoami', function (req,res){
   console.log(req.ip)
-  let IP = req.ip 
+  let ipaddress = req.ip 
   let language = req.headers["accept-language"]
   let software = req.headers['user-agent']
-  console.log({IP,language,software})
-  res.json({IP, language, software})
+  console.log({ipaddress,language,software})
+  res.json({ipaddress, language, software})
 })
 
 module.exports = app
